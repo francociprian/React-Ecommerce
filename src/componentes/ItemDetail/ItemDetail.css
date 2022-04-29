@@ -4,8 +4,18 @@
 }
 .detail-type {
     text-align: right;
-
 }
+.detail-link {
+    display: flex;
+    justify-content: space-between;
+}
+.detail-arrow{
+    color: #6c757d;
+}
+.detail-arrow:hover {
+    color: #6c6c6c;;
+}
+
 .itemCount {
     justify-content: flex-end;
 }

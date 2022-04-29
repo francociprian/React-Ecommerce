@@ -1,3 +1,5 @@
+import { BsArrowLeftCircleFill } from "react-icons/bs";
+import { Link } from 'react-router-dom'
 import ItemCount from '../ItemCount/ItemCount';
 import './ItemDetail.css'
 
@@ -10,7 +12,12 @@ function ItemDetail({producto}) {
   return (
     <>
       <div>
-          <p className='detail-type'>{producto.description}</p>
+          <div className="detail-link">
+            <Link to='/' className="detail-arrow">
+              <BsArrowLeftCircleFill className="fs-3"/> 
+            </Link>
+            <p className='detail-type'>{producto.description}</p>
+          </div>
           <div className='detail-description'>
             <img className='detail-image' src={ producto.image } alt=''/>
             <div className='detail-add'>
