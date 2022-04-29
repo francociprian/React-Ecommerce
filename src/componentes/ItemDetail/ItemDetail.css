@@ -1,0 +1,26 @@
+.detail-image{
+    width: 360px;
+    height: 530px;
+}
+.detail-type {
+    text-align: right;
+
+}
+.itemCount {
+    justify-content: flex-end;
+}
+.detail-add{
+    height: 530px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.detail-description {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+}
+.detail-title {
+    font-size: 1.5rem;
+}

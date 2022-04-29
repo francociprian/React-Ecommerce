@@ -1,0 +1,9 @@
+.card-body {
+    padding: 0 !important;
+}
+.card-header p {
+    color: black;
+}
+.card-footer p {
+    color: black;
+}
