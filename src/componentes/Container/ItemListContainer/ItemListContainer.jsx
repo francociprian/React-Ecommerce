@@ -4,13 +4,12 @@ import { useParams } from "react-router-dom";
 import ItemList from "../../ItemList/ItemList";
 import { Spinner } from 'react-bootstrap'
 import './ItemListContainer.css';
+import { ContextApp } from "../../../Context/CartContext";
  
 function ItemListContiner({ saludo }) {  
   const [prods, setProds] = useState([]);
   const [loading, setLoading] = useState(true);
-  // const [bool, setBool] = useState(true);
   const {id} = useParams();
-
 
   useEffect(()=> {
     if(id) {
@@ -27,15 +26,21 @@ function ItemListContiner({ saludo }) {
   }, [id])
 
   return (
-    <div className="container mb-5">
-      <div className="row justify-content-center">
-        {/* <div>{ saludo }</div> */}
-          {   loading ? <div className="load"><Spinner animation="border" role="status" /> </div> 
-            :
-              <ItemList prods={prods}/>
-          }
-      </div>
-    </div>
+    <>
+      <ContextApp.Provider
+        value={{
+          prods
+        }}>  
+        <div className="container mb-5">
+          <div className="row justify-content-center">
+              {   loading ? <div className="load"><Spinner animation="border" role="status" /> </div> 
+                :
+                  <ItemList />
+              }
+          </div>
+        </div>
+      </ContextApp.Provider>
+    </>
   )
 }
 

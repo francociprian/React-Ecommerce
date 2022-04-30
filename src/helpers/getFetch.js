@@ -10,7 +10,7 @@ const productos = [
   description: 'Jacket',
   stock: 10, 
   image: '../media/men/men1a.webp',
-  image2: "media/men/men1b.webp"
+  image2: "../media/men/men1b.webp"
   },
   {
   id: '2',
@@ -19,7 +19,7 @@ const productos = [
   description: 'Jacket',
   stock: 10,
   image: "../media/men/men2a.webp",
-  image2: "media/men/men2b.webp"
+  image2: "../media/men/men2b.webp"
   },
   {
   id: '3',
@@ -28,7 +28,7 @@ const productos = [
   description: 'T-Shirt',
   stock: 10,
   image: "../media/men/men3a.webp",
-  image2: "media/men/men3b.webp"
+  image2: "../media/men/men3b.webp"
   },
   {
   id: '4',
@@ -37,7 +37,7 @@ const productos = [
   description: 'Shorts',
   stock: 10,
   image: "../media/men/men4a.webp",
-  image2: "media/men/men4b.webp"
+  image2: "../media/men/men4b.webp"
   },
   {
   id: '5',
@@ -46,7 +46,7 @@ const productos = [
   description: 'Jacket',
   stock: 10,
   image: "../media/men/men5a.webp",
-  image2: "media/men/men5b.webp"
+  image2: "../media/men/men5b.webp"
   },
   {
   id: '6',
@@ -55,7 +55,7 @@ const productos = [
   description:'Pants',
   stock: 10,
   image: "../media/men/men6a.webp",
-  image2: "media/men/men6b.webp"
+  image2: "../media/men/men6b.webp"
   },
   {
   id: '7',
@@ -64,7 +64,7 @@ const productos = [
   description: 'Jacket',
   stock: 10,
   image: "../media/men/men7a.webp",
-  image2: "media/men/men7b.webp"
+  image2: "../media/men/men7b.webp"
   },
   {
   id: '8',
@@ -73,7 +73,7 @@ const productos = [
   description: 'Sweater',
   stock: 10,
   image: "../media/men/men8a.webp",
-  image2: "media/men/men8b.webp"
+  image2: "../media/men/men8b.webp"
   },
   {
   id: '9',
@@ -82,7 +82,7 @@ const productos = [
   description:'Pants',
   stock: 10,
   image: "../media/men/men9a.webp",
-  image2: "media/men/men9b.webp"
+  image2: "../media/men/men9b.webp"
   },
   {
   id: '10',
@@ -91,7 +91,7 @@ const productos = [
   description: 'T-Shirt',
   stock: 10,
   image: "../media/men/men10a.webp",
-  image2: "media/men/men10b.webp"
+  image2: "../media/men/men10b.webp"
   },
   {
   id: '11',
@@ -100,7 +100,7 @@ const productos = [
   description: 'Jacket',
   stock: 10,
   image: "../media/men/men11a.webp",
-  image2: "media/men/men11b.webp"
+  image2: "../media/men/men11b.webp"
   },
   {
   id: '12',
@@ -109,7 +109,7 @@ const productos = [
   description:'Pants',
   stock: 10,
   image: "../media/men/men12a.webp",
-  image2: "media/men/men12b.webp"
+  image2: "../media/men/men12b.webp"
   }
 ]
 

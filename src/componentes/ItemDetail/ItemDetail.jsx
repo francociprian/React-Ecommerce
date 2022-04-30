@@ -11,17 +11,18 @@ function ItemDetail({producto}) {
 
   return (
     <>
-      <div>
+      <div className="container">
           <div className="detail-link">
             <Link to='/' className="detail-arrow">
-              <BsArrowLeftCircleFill className="fs-3"/> 
+              <BsArrowLeftCircleFill className="detail-arrow-icon"/> 
             </Link>
             <p className='detail-type'>{producto.description}</p>
           </div>
+          <p className='detail-title'>{producto.title}</p>
           <div className='detail-description'>
             <img className='detail-image' src={ producto.image } alt=''/>
+            <img className='detail-image' src={ producto.image2 } alt=''/>
             <div className='detail-add'>
-              <p className='detail-title'>{producto.title}</p>
               <p className='fs-4'>${producto.price}</p>
               <ItemCount initial={1} stock={10} onAdd= { onAdd } />
             </div>  
