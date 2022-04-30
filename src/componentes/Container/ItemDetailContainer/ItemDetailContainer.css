@@ -1,7 +1,10 @@
 .detail-container {
     /* background-color: cadetblue; */
-    height: 75vh;
     margin-top: 2rem;
-    margin-bottom: 2rem;
     cursor: pointer;
+}
+@media all and (max-width: 576px) {
+    .detail-container {
+        margin-bottom: 4rem;
+    } 
 }

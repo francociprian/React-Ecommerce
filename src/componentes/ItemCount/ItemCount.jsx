@@ -26,12 +26,12 @@ const ItemCount = ({ initial, stock, onAdd }) => {
     return (
         <div className='itemCount'>
           <div>
-              <Button style={{margin: '5px 15px'}} variant="dark" onClick={ handleDecrease } >-</Button>
+              <Button style={{margin: '5px 15px'}} variant="secondary" onClick={ handleDecrease } >-</Button>
                   <label>{ count }</label>
-              <Button style={{margin: '5px 15px'}} variant="dark" onClick={ handleIncrease } >+</Button>
+              <Button style={{margin: '5px 15px'}} variant="secondary" onClick={ handleIncrease } >+</Button>
           </div>
           <Link to='/cart'>
-                <Button variant='success' onClick={ add }>Add to Cart</Button>
+                <Button variant='outline-success' onClick={ add }>Add to Cart</Button>
           </Link>
         </div>
     )
