@@ -1,7 +1,8 @@
 .detail-cont {
     border: 1px solid #ced4da;
-    border-radius: 10px;
+    border-radius: 5px;
     padding-bottom: 1rem;
+    margin-top: 1.5rem;
 }
 .detail-image{
     width: 460px;
@@ -9,6 +10,8 @@
 }
 .detail-type {
     text-align: right;
+    padding-top: 5px;
+    padding-right: 5px;
 }
 .detail-link {
     display: flex;
@@ -37,10 +40,18 @@
     justify-content: center;
     align-items: flex-start;
     gap: 2rem;
+    padding-top: 1rem;
 }
 .detail-title {
     font-size: 1.5rem;
     border-bottom: 1px solid #ced4da;
+}
+.detail-buttton{
+    display: flex;
+    flex-direction: column;
+}
+.detail-buttton Button {
+    margin-top: 1rem;
 }
 @media all and (max-width: 576px) {
     .detail-image{
@@ -59,5 +70,11 @@
     }
     .item-detail{
         margin-bottom: 3rem;
+    }
+}
+@media all and (max-width: 1200px) {
+    .detail-description{
+        flex-direction: column;
+        align-items: center;
     }
 }

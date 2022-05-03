@@ -6,6 +6,7 @@ const productos = [
   {
   id: '1',
   price: 140,
+  brand:'Stüssy',
   title: "Frank Plaid Zip LS Shirt",
   description: 'Jacket',
   stock: 10, 
@@ -15,6 +16,7 @@ const productos = [
   {
   id: '2',
   price: 227,
+  brand:'Stüssy',
   title: "Washed Canvas Shop Jacket",
   description: 'Jacket',
   stock: 10,
@@ -24,6 +26,7 @@ const productos = [
   {
   id: '3',
   price: 100,
+  brand: 'Wood Wood',
   title: "Sami JM planted T-shirt",
   description: 'T-Shirt',
   stock: 10,
@@ -33,6 +36,7 @@ const productos = [
   {
   id: '4',
   price: 96,
+  brand: 'Palmes',
   title: "Palmes Middle Shorts",
   description: 'Shorts',
   stock: 10,
@@ -42,6 +46,7 @@ const productos = [
   {
   id: '5',
   price: 360,
+  brand: 'Wood Wood',
   title: "Deller tech jacket",
   description: 'Jacket',
   stock: 10,
@@ -51,6 +56,7 @@ const productos = [
   {
   id: '6',
   price: 250,
+  brand: 'Wood Wood',
   title: "Will heavy twill trousers",
   description:'Pants',
   stock: 10,
@@ -60,6 +66,7 @@ const productos = [
   {
   id: '7',
   price: 279,
+  brand: 'The North Face',
   title: "M Sherpa Nuptse Jacket",
   description: 'Jacket',
   stock: 10,
@@ -69,6 +76,7 @@ const productos = [
   {
   id: '8',
   price: 245,
+  brand:'Neighborhood',
   title: "Jacquard / AW-Knit . LS",
   description: 'Sweater',
   stock: 10,
@@ -78,6 +86,7 @@ const productos = [
   {
   id: '9',
   price: 101,
+  brand: 'The North Face',
   title: "M Color Block Fleece Pant",
   description:'Pants',
   stock: 10,
@@ -87,6 +96,7 @@ const productos = [
   {
   id: '10',
   price: 79,
+  brand:'Nike',
   title: "M NRG Kr LS Shooting",
   description: 'T-Shirt',
   stock: 10,
@@ -96,6 +106,7 @@ const productos = [
   {
   id: '11',
   price: 700,
+  brand: 'Wood Wood',
   title: "Casey JC nylon bomber",
   description: 'Jacket',
   stock: 10,
@@ -105,6 +116,7 @@ const productos = [
   {
   id: '12',
   price: 144,
+  brand:'Stüssy',
   title: "Denim Work Pant",
   description:'Pants',
   stock: 10,

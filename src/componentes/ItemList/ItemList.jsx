@@ -1,10 +1,8 @@
-import { useContext } from "react";
-import { ContextApp } from "../../Context/CartContext";
+
 import Item from "../Item/Item";
 
 
-function ItemList() {
-  const { prods } = useContext(ContextApp);
+function ItemList({ prods }) {
   return (
     <>
       { prods.map((prod) => <Item key={prod.id} prod={prod} /> ) }

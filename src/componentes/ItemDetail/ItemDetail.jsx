@@ -1,14 +1,34 @@
+import { useCartContext } from "../../Context/CartContext";
 import { BsArrowLeftCircleFill } from "react-icons/bs";
 import { Link } from 'react-router-dom'
 import ItemCount from '../ItemCount/ItemCount';
 import './ItemDetail.css'
+import { useState } from "react";
+import { Button } from 'react-bootstrap'
+
+
+export function ButtonCartContinue () {
+  return (
+      <div className='detail-buttton'>
+        <Link to='/'>
+          <Button variant='secondary'>Seguir Comprando</Button> 
+        </Link>
+        <Link to='/cart'>
+          <Button variant='success'>Ir a Cart</Button>
+        </Link>
+      </div>
+  )
+} 
 
 function ItemDetail({producto}) {
+  const { addToCart, cartList } = useCartContext()
+  const [buttonChange, setButttonChange] = useState(false)
 
   const onAdd = (cant) => {
-    console.log(cant)
+    addToCart( {...producto, cantidad: cant} )
+    setButttonChange(true)
   }
-
+  console.log(cartList)
   return (
     <>
       <div className="item-detail">
@@ -16,9 +36,9 @@ function ItemDetail({producto}) {
             <Link to='/' className="detail-arrow">
               <BsArrowLeftCircleFill className="detail-arrow-icon"/> 
             </Link>
-            <p className='detail-type'>{producto.description}</p>
           </div>
           <div className="detail-cont">
+            <p className='detail-type'>{producto.brand}</p>
             <p className='detail-title'>{producto.title}</p>
             <div className='detail-description'>
               <div>
@@ -27,7 +47,11 @@ function ItemDetail({producto}) {
               </div>
               <div className='detail-add'>
                 <p className='fs-4'>${producto.price}</p>
-                <ItemCount initial={1} stock={10} onAdd= { onAdd } />
+                {buttonChange ? 
+                    <ButtonCartContinue />
+                    :
+                    <ItemCount initial={1} stock={10} onAdd= { onAdd } />
+                }
               </div>  
             </div>
           </div>
@@ -35,5 +59,4 @@ function ItemDetail({producto}) {
     </>
   )
 }
-
 export default ItemDetail

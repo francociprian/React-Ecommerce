@@ -1,9 +1,8 @@
 import { useState } from 'react';
 import { Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom' ;
-
 
 const ItemCount = ({ initial, stock, onAdd }) => {
+
     const [ count, setCount ] = useState(initial)
 
     const handleIncrease = () => {
@@ -18,8 +17,7 @@ const ItemCount = ({ initial, stock, onAdd }) => {
     }   
 
     const add = () => {
-        onAdd( count )
-        // console.log(count)
+        onAdd(count)
     }
     
 
@@ -30,9 +28,7 @@ const ItemCount = ({ initial, stock, onAdd }) => {
                   <label>{ count }</label>
               <Button style={{margin: '5px 15px'}} variant="secondary" onClick={ handleIncrease } >+</Button>
           </div>
-          <Link to='/cart'>
                 <Button variant='outline-success' onClick={ add }>Add to Cart</Button>
-          </Link>
         </div>
     )
 }

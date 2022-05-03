@@ -2,13 +2,14 @@ import { useState, useEffect } from "react";
 import { getFetch } from "../../../helpers/getFetch";
 import { useParams } from "react-router-dom";
 import ItemList from "../../ItemList/ItemList";
-import { Spinner } from 'react-bootstrap'
+import { Spinner } from 'react-bootstrap';
 import './ItemListContainer.css';
-import { ContextApp } from "../../../Context/CartContext";
+import ItemSearch from "../ItemSearch/ItemSearch";
  
-function ItemListContiner({ saludo }) {  
+function ItemListContiner() {  
   const [prods, setProds] = useState([]);
   const [loading, setLoading] = useState(true);
+  
   const {id} = useParams();
 
   useEffect(()=> {
@@ -26,21 +27,17 @@ function ItemListContiner({ saludo }) {
   }, [id])
 
   return (
-    <>
-      <ContextApp.Provider
-        value={{
-          prods
-        }}>  
+      <> 
         <div className="container mb-5">
           <div className="row justify-content-center">
+              <ItemSearch />
               {   loading ? <div className="load"><Spinner animation="border" role="status" /> </div> 
                 :
-                  <ItemList />
+                  <ItemList prods={prods}/>
               }
           </div>
         </div>
-      </ContextApp.Provider>
-    </>
+      </>
   )
 }
 

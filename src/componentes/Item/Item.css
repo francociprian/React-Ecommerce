@@ -1,9 +1,11 @@
 .card-body {
     padding: 0 !important;
 }
-.card-header p {
+.card-header .item-title {
     color: black;
+    text-align: right;
+    font-size: 12px;
 }
-.card-footer p {
+.card-footer .item-title {
     color: black;
 }
