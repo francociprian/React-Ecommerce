@@ -1,5 +1,9 @@
 import { useState } from 'react';
-import { Button } from 'react-bootstrap';
+import Button from '@mui/material/Button';
+import Stack from '@mui/material/Stack';
+import AddCircleIcon from '@mui/icons-material/AddCircle';
+import RemoveCircleIcon from '@mui/icons-material/RemoveCircle';
+import ButtonGroup from '@mui/material/ButtonGroup';
 
 const ItemCount = ({ initial, stock, onAdd }) => {
 
@@ -22,14 +26,14 @@ const ItemCount = ({ initial, stock, onAdd }) => {
     
 
     return (
-        <div className='itemCount'>
-          <div>
-              <Button style={{margin: '5px 15px'}} variant="secondary" onClick={ handleDecrease } >-</Button>
-                  <label>{ count }</label>
-              <Button style={{margin: '5px 15px'}} variant="secondary" onClick={ handleIncrease } >+</Button>
-          </div>
-                <Button variant='outline-success' onClick={ add }>Add to Cart</Button>
-        </div>
+        <Stack direction='column' spacing={1}>
+            <ButtonGroup aria-label="large button group" variant="text" size="large" color="inherit" >
+                <Button onClick={ handleDecrease }><RemoveCircleIcon /></Button>
+                    <Button>{ count }</Button>
+                <Button onClick={ handleIncrease }><AddCircleIcon /></Button>
+            </ButtonGroup>
+            <Button variant="contained" color="success" onClick={ add }>Add to Cart</Button>
+        </Stack>
     )
 }
 

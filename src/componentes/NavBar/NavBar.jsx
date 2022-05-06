@@ -19,7 +19,7 @@ function NavBar() {
                     <NavLink to="/" className="nav-link">Men</NavLink>
                 </Nav>
                 <Nav>
-                    <NavLink to='cart' className="nav-link"> {/* className={ ({ isActive }) => isActive ? 'active' : 'disable'} */}  
+                    <NavLink to='cart' className="nav-link" > {/* className={ ({ isActive }) => isActive ? 'active' : 'disable'} */}  
                         <Widget />
                     </NavLink>
                 </Nav>

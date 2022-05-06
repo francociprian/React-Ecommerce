@@ -1,20 +1,20 @@
 import { useCartContext } from "../../Context/CartContext";
 import { BsArrowLeftCircleFill } from "react-icons/bs";
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import ItemCount from '../ItemCount/ItemCount';
-import './ItemDetail.css'
+import './ItemDetail.css';
 import { useState } from "react";
-import { Button } from 'react-bootstrap'
+import Button from '@mui/material/Button';
 
 
 export function ButtonCartContinue () {
   return (
       <div className='detail-buttton'>
         <Link to='/'>
-          <Button variant='secondary'>Seguir Comprando</Button> 
+          <Button variant="contained" color="primary">Seguir Comprando</Button> 
         </Link>
         <Link to='/cart'>
-          <Button variant='success'>Ir a Cart</Button>
+          <Button variant="contained" color="primary">Ir a Cart</Button>
         </Link>
       </div>
   )

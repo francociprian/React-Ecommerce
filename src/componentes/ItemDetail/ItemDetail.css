@@ -27,9 +27,6 @@
     font-size: 1.75rem
 }
 
-.itemCount {
-    justify-content: flex-end;
-}
 .detail-add{
     display: flex;
     flex-direction: column;

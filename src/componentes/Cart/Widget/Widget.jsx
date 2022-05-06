@@ -1,10 +1,15 @@
-import React from 'react'
-import { BsCart2 } from "react-icons/bs";
+import Badge from '@mui/material/Badge';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import { useCartContext } from '../../../Context/CartContext';
 
 function Widget() {
+  const { totalCart } = useCartContext()
+
   return (
     <>
-      <BsCart2 style={ {fontSize: '1.2rem'} }/>
+      <Badge badgeContent={totalCart()} color="primary" >
+        <ShoppingCartIcon  color='action' style={{color: 'white'}}/>
+      </Badge>
     </>
   )
 }
