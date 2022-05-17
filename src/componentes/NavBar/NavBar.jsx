@@ -7,12 +7,11 @@ import './NavBar.css';
 
 
 function NavBar() {
-    //console.log(props)
   return (
     <>
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Container>
-                <NavLink to='/' className="navbar-brand">React-Ecommerce</NavLink>
+                <NavLink to='/' className="navbar-brand">Ecommerce</NavLink>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="me-auto">

@@ -4,6 +4,7 @@ import NavBar from './componentes/NavBar/NavBar';
 import ItemListContainer from './componentes/Container/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './componentes/Container/ItemDetailContainer/ItemDetailContainer';
 import Cart from './componentes/Cart/Cart';
+// import Footer from './componentes/Footer/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
@@ -36,6 +37,7 @@ function App() { // COMPONENTE CONTENEDOR
                       <Route path='/cart' element={<Cart />} />
                       <Route path='/*' element={ <Navigate to='/'/> } />
                   </Routes>
+                  {/* <Footer/>  */}
               </div>
             </CartContextProvider>
           </BrowserRouter>

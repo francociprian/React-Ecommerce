@@ -6,17 +6,13 @@ import { Spinner } from 'react-bootstrap';
 import './ItemListContainer.css';
 import ItemSearch from "../ItemSearch/ItemSearch";
 
-import { collection, getDocs, getFirestore, query } from 'firebase/firestore'; 
+import { collection, getDocs, getFirestore, query, where } from 'firebase/firestore'; 
 
 
 function ItemListContiner() {  
   const [prods, setProds] = useState([]);
   const [loading, setLoading] = useState(true);
-  // const [bool, setBool] = useState(true)
 
-  // const [prod, setProd] = useState({});
-
-  
   const { id } = useParams();
 
   // useEffect(()=> {
@@ -34,44 +30,41 @@ function ItemListContiner() {
   //   }, [id])
 
 
-
   /* TRAER UN SOLO PRODUCTO DE FIRESTORE*/
-  /* ITEM DETAIL CONTAINER*/
-  // useEffect(()=> {
-  //   const db = getFirestore()
-    
-  //   const querryDoc = doc(db, 'items', 'XYOSATx2YdXJ9opT2dBP')
-  //   getDoc(querryDoc)
-  //   .then (resp => setProd( { id: resp.id, ...resp.data() } ))
-
-  // }, [id])
+  /*useEffect(()=> {
+    const db = getFirestore()
+    const querryDoc = doc(db, 'items', 'XYOSATx2YdXJ9opT2dBP')
+    getDoc(querryDoc)
+    .then (resp => setProd( { id: resp.id, ...resp.data() } ))
+  }, [id]) */
 
   /* TRAER TODOS LOS PRODUCTOS DE FIRESTORE*/
-  /* ITEM LIST CONTAINER */
-  useEffect(()=> {
+  /* useEffect(()=> {
     const db = getFirestore()
     
     const queryCollection = collection(db, 'items')
-    // const queryFilter = query(queryCollection, where('price', '>=', 10) )
     const queryFilter = query(queryCollection)
     getDocs(queryFilter)
     .then (resp => setProds( resp.docs.map(producto =>({ id: producto.id, ...producto.data() }))))
     .catch((err) => console.log(err))
     .finally(() => setLoading(false))
-  }, [id])
+  }, [id]) */
 
+  useEffect(()=> {
+    const db = getFirestore()    
+    const queryCollectionFinal =  !id ?  collection(db, 'items'):   query( collection(db, 'items'), where('description','==', id) )                             
 
-  
-  // const handleClick=(e)=>{
-  //   e.preventDefault() 
-  //   setBool(!bool)
-  // }
+    getDocs(queryCollectionFinal)
+    .then(resp => setProds( resp.docs.map(producto =>( {id: producto.id, ...producto.data()}) ) ) )
+    .catch(err => console.log(err))
+    .finally(()=> setLoading(false))   
+    
+}, [id]) 
 
   return (
       <> 
         <div className="container mb-5">
           <div className="row justify-content-center">
-              {/* <button onClick={handleClick} className='btn btn-outline-primary w-50'>Cambiar estado </button>     */}
               <ItemSearch />
               {   loading ? <div className="load"><Spinner animation="border" role="status" /> </div> 
                 :

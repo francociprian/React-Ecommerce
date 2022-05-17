@@ -13,7 +13,7 @@ function Cart() {
   return (  
     <>
       {cartList.length === 0 ? 
-          <div className='mt-5'>
+          <div className='mt-5' style={{ height: '85vh'}}>
             <p className='display-5'>The cart is empty</p>
             <Link to='/' >
               <Button variant='contained' color="success">Keep buying</Button>
@@ -36,13 +36,13 @@ function Cart() {
                         <div className='cart-container-icon'>
                           <div>
                             <p className='cart-container-title'>{ item.title }</p>
-                            <IconButton aria-label="delete" onClick={ deleteItem }><DeleteIcon /></IconButton>
+                            <IconButton aria-label="delete" onClick={ ()=> deleteItem(item.id) }><DeleteIcon /></IconButton>
                           </div>
                         </div>
                         <div className='cart-price'>
                           <p>Amount: { item.cantidad }</p>
                           <p>Price: ${ item.price }</p>
-                        </div>
+                        </div> 
                     </div>
                   </div>
                 </div> 

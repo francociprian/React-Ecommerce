@@ -29,9 +29,8 @@ function CartContextProvider({children}) {
         return cartList.reduce((acc, item) => acc += item.cantidad * item.price, 0)
     }
     const deleteItem = (id) => {
-        setcartList(cartList.filter(clear => clear.id === id))
+        setcartList(cartList.filter(x => x.id !== id))
     }
-
     const isInCart = (id) => {
         return cartList.some(prod => prod.id === id)
     }
